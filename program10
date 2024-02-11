@@ -1,10 +1,20 @@
 #include<stdio.h>
 #include<math.h>
 #include<conio.h>
+int gcd(int pn,int e)
+{
+int c,j;
+for(j=1;j<=pn;j++)
+{
+if((pn%j==0)&&(e%j==0))
+c=j;
+}
+return c;
+}
 void main()
 {
 int m,n,d,e,val,count1,count2,p,q,i,j,k,pn,a[10],op;
-int c=1; clrscr();
+int c=1;
 printf("\nRSA ALGORITHM");
 printf("\nEnter the Plain Text :");
 scanf("%d",&m);
@@ -78,14 +88,4 @@ if(d%2!=0)
 k=k*(c%n);
 printf("%d",k%n);
 getch();
-}
-int gcd(int pn,int e)
-{
-int c,j;
-for(j=1;j<=pn;j++)
-{
-if((pn%j==0)&&(e%j==0))
-c=j;
-}
-return c;
 }
